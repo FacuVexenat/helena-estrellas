@@ -133,7 +133,9 @@ const D = {"S": [{"fecha": "2026-11-23", "dia": "Lun", "semana": 0, "bloques": [
 const KEY = "helena-estrellas-v1";
 let st = {};
 try { st = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { st = {}; }
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
+const mirror = () => { try { if (window.caches) caches.open("helena-state").then(c => c.put("./state.json", new Response(JSON.stringify(st), {headers: {"Content-Type": "application/json"}}))).catch(() => {}); } catch (e) {} };
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} mirror(); };
+const VAPID = "BMSC9De7ub_iBXvXFC9TPzg4CqZHb-wr7O0I7E0MHsDvr_q2QWLLV_vgys0o4duOY725dyQetrG6qBOAlsVNP8A";
 const esc = t => String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const pad = n => String(n).padStart(2, "0");
 const now = new Date();
@@ -339,6 +341,10 @@ function viewPapis(){
       ${d.bloques.map(b => `<div class="row${b.k?" k":""}${b.k&&st[b.k]?" ok":""}"><span>${esc(b.hora)}</span><div><b>${esc(b.titulo)}</b>${b.k&&st[b.k]?`<div class="small" style="color:#2E7D32;font-weight:700">✔ ${esc(doneTxt(b, d))}</div>`:""}${b.det?`<div class="small">${esc(b.det)}</div>`:""}</div></div>`).join("")}
       </div></div>`;
   });
+  h += `<h2 style="margin-top:22px">🔔 Avisos</h2>
+    <div class="box"><p>Le llega una notificación a la hora de cada misión (sesión, plaza, «Leo y hablo») y 15 minutos antes de la clase de inglés, aunque la app esté cerrada.</p>
+    <p class="small">En iPhone funciona solo con la app agregada a la pantalla de inicio (iOS 16.4 o más nuevo).</p>
+    <p style="text-align:center"><button class="btn" id="notif">${notifLabel()}</button></p><p class="small" id="nstat" style="text-align:center"></p></div>`;
   const rows = [];
   D.S.slice(wk*7, wk*7+7).forEach(d => d.bloques.filter(b => b.k && st[b.k]).forEach(b => rows.push({d, b})));
   h += `<h2 style="margin-top:22px">🕒 Registro de horarios</h2>
@@ -410,6 +416,8 @@ function bind(){
     greeted = true;
     speak(`${saludo()} ${lbl} ${DIAS_L[d.dia]}. ` + (keys(d).length ? (ms.length ? `Te faltan estas misiones: ${ms.join(", ")}. Tocá cada misión para escuchar qué hacer, y cuando termines tocá la estrella.` : "¡Ya completaste todas tus misiones! Ahora podés jugar a lo que quieras.") : "Hoy es día libre. ¡A jugar!"));
   };
+  const nb = document.getElementById("notif");
+  if (nb) nb.onclick = () => enablePush(nb, document.getElementById("nstat"));
   q("[data-edit]").forEach(inp => inp.onchange = () => {
     const k = inp.dataset.edit; if (!inp.value) return;
     const f = k.slice(0, 10), r = rec(k) || {};
@@ -435,6 +443,28 @@ function bind(){
   const r = document.getElementById("reset");
   if (r) r.onclick = () => ask("¿Borrar todas las estrellas de Helena?", () => { st = {}; save(); render(); });
 }
+function notifLabel(){
+  if (!("Notification" in window) || !("serviceWorker" in navigator) || !("PushManager" in window)) return "Avisos no disponibles en este navegador";
+  return Notification.permission === "granted" && localStorage.getItem("helena-push") ? "✅ Avisos activados · probar de nuevo" : "🔔 Activar avisos";
+}
+async function enablePush(btn, stat){
+  const say = t => { if (stat) stat.textContent = t; };
+  try {
+    if (!("serviceWorker" in navigator) || !("PushManager" in window)) { say("Este navegador no permite avisos. En iPhone, abrí la app desde el ícono de la pantalla de inicio."); return; }
+    const perm = await Notification.requestPermission();
+    if (perm !== "granted") { say("No se dio permiso. Podés habilitarlo en Configuración → Notificaciones."); return; }
+    const reg = await navigator.serviceWorker.ready;
+    const key = Uint8Array.from(atob(VAPID.replace(/-/g, "+").replace(/_/g, "/")), c => c.charCodeAt(0));
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
+    const r = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ subscription: sub.toJSON() }) });
+    if (!r.ok) throw new Error("servidor " + r.status);
+    try { localStorage.setItem("helena-push", "1"); } catch (e) {}
+    reg.showNotification("⭐ ¡Avisos activados!", { body: "Así le van a llegar los recordatorios a Helena.", icon: "icon-192.png" });
+    say("Listo: los avisos quedaron activados en este teléfono.");
+    if (btn) btn.textContent = notifLabel();
+  } catch (e) { say("No se pudieron activar los avisos (" + (e && e.message ? e.message : e) + ")."); }
+}
 function ask(t, yes){
   const md = document.getElementById("modal");
   document.getElementById("mtext").textContent = t; md.classList.add("on");
@@ -445,7 +475,7 @@ document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
   tab = b.dataset.t; if (tab === "hoy") idx = todayIdx; if (tab === "semana" || tab === "papis") wk = Math.floor(todayIdx/7);
   render(); window.scrollTo(0,0);
 });
-render();
+render(); mirror();
 if ("serviceWorker" in navigator && location.protocol === "https:") {
   try { navigator.serviceWorker.register("sw.js").catch(() => {}); } catch (e) {}
 }

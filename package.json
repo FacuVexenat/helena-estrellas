@@ -1,0 +1,8 @@
+{
+  "name": "helena-estrellas",
+  "private": true,
+  "description": "Las estrellas de Helena: rutina diaria con avisos",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
