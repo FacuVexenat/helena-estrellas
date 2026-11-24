@@ -341,7 +341,7 @@ function viewPapis(){
       ${d.bloques.map(b => `<div class="row${b.k?" k":""}${b.k&&st[b.k]?" ok":""}"><span>${esc(b.hora)}</span><div><b>${esc(b.titulo)}</b>${b.k&&st[b.k]?`<div class="small" style="color:#2E7D32;font-weight:700">✔ ${esc(doneTxt(b, d))}</div>`:""}${b.det?`<div class="small">${esc(b.det)}</div>`:""}</div></div>`).join("")}
       </div></div>`;
   });
-  h += `<h2 style="margin-top:22px">🔔 Avisos</h2>
+  if (/netlify\.app$/.test(location.hostname)) h += `<h2 style="margin-top:22px">🔔 Avisos</h2>
     <div class="box"><p>Le llega una notificación a la hora de cada misión (sesión, plaza, «Leo y hablo») y 15 minutos antes de la clase de inglés, aunque la app esté cerrada.</p>
     <p class="small">En iPhone funciona solo con la app agregada a la pantalla de inicio (iOS 16.4 o más nuevo).</p>
     <p style="text-align:center"><button class="btn" id="notif">${notifLabel()}</button></p><p class="small" id="nstat" style="text-align:center"></p></div>`;
