@@ -1,6 +1,7 @@
 import { getStore } from "@netlify/blobs";
 import { createPrivateKey, sign } from "node:crypto";
 import reminders from "../../reminders.json" with { type: "json" };
+import { pushHostOk } from "../lib/push.mjs";
 
 // Argentina no tiene horario de verano: UTC-3 todo el año.
 const AR_OFFSET_MIN = -180;
@@ -21,7 +22,7 @@ function vapidAuth(endpoint) {
   const pub = b64u(Buffer.concat([Buffer.from([4]), Buffer.from(jwk.x, "base64url"), Buffer.from(jwk.y, "base64url")]));
   const aud = new URL(endpoint).origin;
   const header = b64u(JSON.stringify({ typ: "JWT", alg: "ES256" }));
-  const payload = b64u(JSON.stringify({ aud, exp: Math.floor(Date.now() / 1000) + 12 * 3600, sub: process.env.VAPID_SUBJECT || "https://helena-estrellas.netlify.app" }));
+  const payload = b64u(JSON.stringify({ aud, exp: Math.floor(Date.now() / 1000) + 12 * 3600, sub: process.env.VAPID_SUBJECT || "mailto:avisos@example.com" }));
   const key = createPrivateKey({ key: jwk, format: "jwk" });
   const sig = sign("sha256", Buffer.from(`${header}.${payload}`), { key, dsaEncoding: "ieee-p1363" });
   return `vapid t=${header}.${payload}.${b64u(sig)}, k=${pub}`;
@@ -39,6 +40,7 @@ export default async () => {
   const subs = (await store.get("subs", { type: "json" })) || [];
   const keep = [];
   for (const s of subs) {
+    if (!pushHostOk(s.endpoint)) continue; // nunca llamar a hosts que no sean de push
     let alive = true;
     for (const r of due) {
       // Push sin contenido: el teléfono arma el mensaje con reminders.json
