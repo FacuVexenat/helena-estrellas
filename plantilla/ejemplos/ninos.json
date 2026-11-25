@@ -1,0 +1,676 @@
+{
+ "slug": "mia-misiones",
+ "perfil": {
+  "nombre": "Mía",
+  "apodos": [
+   "campeona",
+   "Mía estrella"
+  ],
+  "prob_apodo": 0.12,
+  "emoji": "🌈"
+ },
+ "app": {
+  "titulo": "Las misiones de Mía",
+  "corto": "Mía ⭐",
+  "letra": "M",
+  "colores": {
+   "d": "#6A1B9A",
+   "p": "#BA68C8",
+   "m": "#E1BEE7",
+   "l": "#F3E5F5",
+   "xl": "#FBF5FC",
+   "ink": "#2E0A3D",
+   "g": "#FFC94D"
+  },
+  "padres_tab": "Mamá/Papá",
+  "padres_emoji": "👩‍👧",
+  "padres_titulo": "Para mamá y papá",
+  "padres_intro": "Cada sesión dura 20–25 minutos: 5 de video, 15 de actividad y 5 de cierre.",
+  "foco_label": "Letra de la semana",
+  "avisos": true,
+  "ejemplo_voz": [
+   "Hoy aprendemos la letra M. ¡Vos podés!",
+   "¿Lista para ganar una estrella? ¡A la plaza!",
+   "Ya es hora del baño. Después tenés un ratito libre.",
+   "¡Ganaste una estrella! Decí conmigo: [red], [blue].",
+   "Había una vez… una nena llamada Mía… que quería leer."
+  ]
+ },
+ "inicio": "2026-12-07",
+ "semanas": 4,
+ "foco_semanal": [
+  "M",
+  "P",
+  "L",
+  "S"
+ ],
+ "areas": {
+  "ABC": {
+   "nombre": "Lectoescritura",
+   "emoji": "🔤",
+   "mision": "Letras y palabras"
+  },
+  "ENG": {
+   "nombre": "Inglés",
+   "emoji": "🇬🇧",
+   "mision": "English time"
+  },
+  "LOG": {
+   "nombre": "Lógica",
+   "emoji": "🧩",
+   "mision": "Desafío de lógica"
+  }
+ },
+ "semana_tipo": {
+  "lun": [
+   {
+    "hora": "7:15",
+    "titulo": "Desayuno",
+    "emoji": "🥣",
+    "voz": "Es hora de vestirse y desayunar."
+   },
+   {
+    "hora": "8:00–12:00",
+    "titulo": "Escuela",
+    "emoji": "🏫",
+    "mision": "Fui a la escuela",
+    "id": "escuela",
+    "voz": "Ahora vas a la escuela. Cuando vuelvas, tocá la estrella."
+   },
+   {
+    "hora": "12:30",
+    "titulo": "Almuerzo",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "13:30–16:00",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "16:00",
+    "titulo": "Merienda",
+    "emoji": "🥛"
+   },
+   {
+    "hora": "16:30–16:55",
+    "pool": "ABC",
+    "aviso": true
+   },
+   {
+    "hora": "19:00",
+    "titulo": "Baño",
+    "emoji": "🛁"
+   },
+   {
+    "hora": "19:30–20:30",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "20:30",
+    "titulo": "Cena",
+    "emoji": "🍝"
+   },
+   {
+    "hora": "21:30",
+    "titulo": "A dormir",
+    "emoji": "😴",
+    "voz": "Es hora de dormir. ¡Buenas noches!"
+   }
+  ],
+  "mar": [
+   {
+    "hora": "7:15",
+    "titulo": "Desayuno",
+    "emoji": "🥣",
+    "voz": "Es hora de vestirse y desayunar."
+   },
+   {
+    "hora": "8:00–12:00",
+    "titulo": "Escuela",
+    "emoji": "🏫",
+    "mision": "Fui a la escuela",
+    "id": "escuela",
+    "voz": "Ahora vas a la escuela. Cuando vuelvas, tocá la estrella."
+   },
+   {
+    "hora": "12:30",
+    "titulo": "Almuerzo",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "13:30–16:00",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "16:00",
+    "titulo": "Merienda",
+    "emoji": "🥛"
+   },
+   {
+    "hora": "16:30–16:55",
+    "pool": "ENG",
+    "aviso": true
+   },
+   {
+    "hora": "17:00–17:30",
+    "titulo": "Plaza",
+    "emoji": "🛝",
+    "mision": "¡A la plaza!",
+    "id": "plaza",
+    "pool": "plaza",
+    "aviso": true
+   },
+   {
+    "hora": "19:00",
+    "titulo": "Baño",
+    "emoji": "🛁"
+   },
+   {
+    "hora": "19:30–20:30",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "20:30",
+    "titulo": "Cena",
+    "emoji": "🍝"
+   },
+   {
+    "hora": "21:30",
+    "titulo": "A dormir",
+    "emoji": "😴",
+    "voz": "Es hora de dormir. ¡Buenas noches!"
+   }
+  ],
+  "mie": [
+   {
+    "hora": "7:15",
+    "titulo": "Desayuno",
+    "emoji": "🥣",
+    "voz": "Es hora de vestirse y desayunar."
+   },
+   {
+    "hora": "8:00–12:00",
+    "titulo": "Escuela",
+    "emoji": "🏫",
+    "mision": "Fui a la escuela",
+    "id": "escuela",
+    "voz": "Ahora vas a la escuela. Cuando vuelvas, tocá la estrella."
+   },
+   {
+    "hora": "12:30",
+    "titulo": "Almuerzo",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "13:30–16:00",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "16:00",
+    "titulo": "Merienda",
+    "emoji": "🥛"
+   },
+   {
+    "hora": "16:30–16:55",
+    "pool": "LOG",
+    "aviso": true
+   },
+   {
+    "hora": "19:00",
+    "titulo": "Baño",
+    "emoji": "🛁"
+   },
+   {
+    "hora": "19:30–20:30",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "20:30",
+    "titulo": "Cena",
+    "emoji": "🍝"
+   },
+   {
+    "hora": "21:30",
+    "titulo": "A dormir",
+    "emoji": "😴",
+    "voz": "Es hora de dormir. ¡Buenas noches!"
+   }
+  ],
+  "jue": [
+   {
+    "hora": "7:15",
+    "titulo": "Desayuno",
+    "emoji": "🥣",
+    "voz": "Es hora de vestirse y desayunar."
+   },
+   {
+    "hora": "8:00–12:00",
+    "titulo": "Escuela",
+    "emoji": "🏫",
+    "mision": "Fui a la escuela",
+    "id": "escuela",
+    "voz": "Ahora vas a la escuela. Cuando vuelvas, tocá la estrella."
+   },
+   {
+    "hora": "12:30",
+    "titulo": "Almuerzo",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "13:30–16:00",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "16:00",
+    "titulo": "Merienda",
+    "emoji": "🥛"
+   },
+   {
+    "hora": "16:30–16:55",
+    "pool": "ABC",
+    "aviso": true
+   },
+   {
+    "hora": "17:00–17:30",
+    "titulo": "Plaza",
+    "emoji": "🛝",
+    "mision": "¡A la plaza!",
+    "id": "plaza",
+    "pool": "plaza",
+    "aviso": true
+   },
+   {
+    "hora": "19:00",
+    "titulo": "Baño",
+    "emoji": "🛁"
+   },
+   {
+    "hora": "19:30–20:30",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "20:30",
+    "titulo": "Cena",
+    "emoji": "🍝"
+   },
+   {
+    "hora": "21:30",
+    "titulo": "A dormir",
+    "emoji": "😴",
+    "voz": "Es hora de dormir. ¡Buenas noches!"
+   }
+  ],
+  "vie": [
+   {
+    "hora": "7:15",
+    "titulo": "Desayuno",
+    "emoji": "🥣",
+    "voz": "Es hora de vestirse y desayunar."
+   },
+   {
+    "hora": "8:00–12:00",
+    "titulo": "Escuela",
+    "emoji": "🏫",
+    "mision": "Fui a la escuela",
+    "id": "escuela",
+    "voz": "Ahora vas a la escuela. Cuando vuelvas, tocá la estrella."
+   },
+   {
+    "hora": "12:30",
+    "titulo": "Almuerzo",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "13:30–16:00",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "16:00",
+    "titulo": "Merienda",
+    "emoji": "🥛"
+   },
+   {
+    "hora": "16:30–16:55",
+    "pool": "ENG",
+    "aviso": true
+   },
+   {
+    "hora": "19:00",
+    "titulo": "Baño",
+    "emoji": "🛁"
+   },
+   {
+    "hora": "19:30–20:30",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   },
+   {
+    "hora": "20:30",
+    "titulo": "Cena",
+    "emoji": "🍝"
+   },
+   {
+    "hora": "21:30",
+    "titulo": "A dormir",
+    "emoji": "😴",
+    "voz": "Es hora de dormir. ¡Buenas noches!"
+   }
+  ],
+  "sab": [
+   {
+    "hora": "9:00",
+    "titulo": "Desayuno tranquilo",
+    "emoji": "🥞"
+   },
+   {
+    "hora": "10:00–10:25",
+    "pool": "LOG",
+    "aviso": true
+   },
+   {
+    "hora": "10:45–11:15",
+    "titulo": "Plaza",
+    "emoji": "🛝",
+    "mision": "¡A la plaza!",
+    "id": "plaza",
+    "pool": "plaza",
+    "aviso": true
+   },
+   {
+    "hora": "Tarde",
+    "titulo": "Tiempo libre: ¡vos elegís!",
+    "emoji": "🎨",
+    "libre": true,
+    "voz": "¡Tiempo libre! Hacé lo que más te guste."
+   }
+  ],
+  "dom": [
+   {
+    "hora": "Todo el día",
+    "titulo": "Domingo libre",
+    "emoji": "🌸",
+    "libre": true,
+    "voz": "Hoy es domingo, ¡día libre!"
+   }
+  ]
+ },
+ "pools": {
+  "ABC": [
+   {
+    "tema": "Letra M",
+    "objetivo": "Leer ma-me-mi-mo-mu y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con M",
+      "https://www.youtube.com/results?search_query=silabas+ma+me+mi+mo+mu+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con M en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra M. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra P",
+    "objetivo": "Leer pa-pe-pi-po-pu y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con P",
+      "https://www.youtube.com/results?search_query=silabas+pa+pe+pi+po+pu+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con P en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra P. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra L",
+    "objetivo": "Leer la-le-li-lo-lu y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con L",
+      "https://www.youtube.com/results?search_query=silabas+la+le+li+lo+lu+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con L en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra L. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra S",
+    "objetivo": "Leer sa-se-si-so-su y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con S",
+      "https://www.youtube.com/results?search_query=silabas+sa+se+si+so+su+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con S en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra S. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra T",
+    "objetivo": "Leer ta-te-ti-to-tu y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con T",
+      "https://www.youtube.com/results?search_query=silabas+ta+te+ti+to+tu+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con T en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra T. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra N",
+    "objetivo": "Leer na-ne-ni-no-nu y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con N",
+      "https://www.youtube.com/results?search_query=silabas+na+ne+ni+no+nu+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con N en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra N. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra D",
+    "objetivo": "Leer da-de-di-do-du y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con D",
+      "https://www.youtube.com/results?search_query=silabas+da+de+di+do+du+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con D en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra D. Mirá el video y después armá palabras con las tarjetas."
+   },
+   {
+    "tema": "Letra R",
+    "objetivo": "Leer ra-re-ri-ro-ru y 3 palabras.",
+    "videos": [
+     [
+      "Sílabas con R",
+      "https://www.youtube.com/results?search_query=silabas+ra+re+ri+ro+ru+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Leer las sílabas con R en tarjetas, armar palabras y escribir una.",
+    "cierre": "Dibujar la palabra que más le gustó.",
+    "material": "Tarjetas, lápices",
+    "voz": "Hoy aprendemos la letra R. Mirá el video y después armá palabras con las tarjetas."
+   }
+  ],
+  "ENG": [
+   {
+    "tema": "Colors",
+    "objetivo": "Frase: «What color is it? It's red.»",
+    "videos": [
+     [
+      "Super Simple Songs I See Something Blue",
+      "https://www.youtube.com/results?search_query=Super+Simple+Songs+I+See+Something+Blue"
+     ]
+    ],
+    "actividad": "Buscar objetos de cada color por la casa.",
+    "cierre": "Cantar la canción de nuevo.",
+    "material": "Objetos de colores",
+    "voz": "[English time!] Hoy aprendemos colors. Mirá el video y después jugamos."
+   },
+   {
+    "tema": "Numbers",
+    "objetivo": "Frase: «How many? Five!»",
+    "videos": [
+     [
+      "Super Simple Songs Seven Steps",
+      "https://www.youtube.com/results?search_query=Super+Simple+Songs+Seven+Steps"
+     ]
+    ],
+    "actividad": "Contar objetos en inglés.",
+    "cierre": "Cantar la canción de nuevo.",
+    "material": "Fichas",
+    "voz": "[English time!] Hoy aprendemos numbers. Mirá el video y después jugamos."
+   },
+   {
+    "tema": "Animals",
+    "objetivo": "Frase: «It's a frog. It can jump.»",
+    "videos": [
+     [
+      "Super Simple Songs Walking In The Jungle",
+      "https://www.youtube.com/results?search_query=Super+Simple+Songs+Walking+In+The+Jungle"
+     ]
+    ],
+    "actividad": "Imitar animales y nombrarlos.",
+    "cierre": "Cantar la canción de nuevo.",
+    "material": "Muñecos",
+    "voz": "[English time!] Hoy aprendemos animals. Mirá el video y después jugamos."
+   },
+   {
+    "tema": "Body",
+    "objetivo": "Frase: «I have two eyes.»",
+    "videos": [
+     [
+      "Super Simple Songs Head Shoulders Knees and Toes",
+      "https://www.youtube.com/results?search_query=Super+Simple+Songs+Head+Shoulders+Knees+and+Toes"
+     ]
+    ],
+    "actividad": "Tocar partes del cuerpo.",
+    "cierre": "Cantar la canción de nuevo.",
+    "material": "—",
+    "voz": "[English time!] Hoy aprendemos body. Mirá el video y después jugamos."
+   }
+  ],
+  "LOG": [
+   {
+    "tema": "Patrones",
+    "objetivo": "Completar series ABC y AAB.",
+    "videos": [
+     [
+      "Patrones",
+      "https://www.youtube.com/results?search_query=patrones+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Series con tapitas: ¿qué sigue?",
+    "cierre": "Inventar uno para un adulto.",
+    "material": "Tapitas",
+    "voz": "Hoy hacemos patrones. ¿Qué color sigue?"
+   },
+   {
+    "tema": "Sudoku 4×4",
+    "objetivo": "No repetir en fila ni columna.",
+    "videos": [
+     [
+      "Sudoku 4×4",
+      "https://www.youtube.com/results?search_query=sudoku+para+ni%C3%B1os+4x4"
+     ]
+    ],
+    "actividad": "Resolver 2 sudokus con dibujos.",
+    "cierre": "Inventar uno para un adulto.",
+    "material": "Hoja",
+    "voz": "Hoy jugamos al sudoku con dibujos."
+   },
+   {
+    "tema": "Programación con flechas",
+    "objetivo": "Seguir instrucciones paso a paso.",
+    "videos": [
+     [
+      "Programación con flechas",
+      "https://www.youtube.com/results?search_query=programacion+desconectada+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Guiar un muñeco con flechas.",
+    "cierre": "Inventar uno para un adulto.",
+    "material": "Cinta, flechas",
+    "voz": "¡Hoy sos programadora!"
+   },
+   {
+    "tema": "Sumas con problemas",
+    "objetivo": "Sumar hasta 10.",
+    "videos": [
+     [
+      "Sumas con problemas",
+      "https://www.youtube.com/results?search_query=problemas+de+suma+para+ni%C3%B1os"
+     ]
+    ],
+    "actividad": "Resolver historias con fichas.",
+    "cierre": "Inventar uno para un adulto.",
+    "material": "Fichas",
+    "voz": "Hoy resolvemos problemas de sumar."
+   }
+  ],
+  "plaza": [
+   {
+    "det": "Carrera de colores.",
+    "voz": "¡A la plaza! Carrera de colores."
+   },
+   {
+    "det": "Circuito de saltos contando en inglés.",
+    "voz": "¡A la plaza! Circuito de saltos contando en inglés."
+   },
+   {
+    "det": "Rayuela con números.",
+    "voz": "¡A la plaza! Rayuela con números."
+   },
+   {
+    "det": "Simon says: jump, run, stop.",
+    "voz": "¡A la plaza! Simon says: jump, run, stop."
+   }
+  ]
+ }
+}

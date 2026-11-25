@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="theme-color" content="__COLOR_D__">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="__CORTO__">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<title>__TITULO__</title>
+<style>
+/* VOICE: tierna y festiva, para una nena de 5
+   IDEA: un álbum de stickers / tablero de estrellas
+   PICTURE: el frasco de estrellas del día que se llena
+   COLOUR and TYPE: rosas de la planilla, Baloo 2
+   LAYOUT: una columna, botones gigantes, barra inferior */
+:root{--d:__COLOR_D__;--p:__COLOR_P__;--m:__COLOR_M__;--l:__COLOR_L__;--xl:__COLOR_XL__;--ink:__COLOR_INK__;--g:__COLOR_G__;
+--st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--xl);color:var(--ink);font:17px/1.4 "Baloo 2","Trebuchet MS",system-ui,sans-serif;overflow-x:clip}
+button{font:inherit;color:inherit}
+header{background:var(--d);color:#fff;padding:calc(var(--st) + 16px) 18px 22px;border-radius:0 0 28px 28px;position:relative}
+header h1{margin:0;font-size:30px;line-height:1.05;font-weight:800}
+header .sub{margin:4px 0 0;font-size:15px;opacity:.92}
+.jar{display:flex;align-items:center;gap:14px;margin-top:14px;background:rgba(255,255,255,.16);border-radius:20px;padding:10px 14px}
+.jar .big{font-size:34px;font-weight:800;line-height:1}
+.jar .lbl{font-size:13px;opacity:.95}
+.meter{flex:1;height:18px;background:rgba(255,255,255,.28);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--g);border-radius:99px;transition:width .5s}
+main{padding:16px 14px calc(96px + var(--sb));max-width:640px;margin:0 auto}
+h2{font-size:22px;margin:6px 4px 10px;color:var(--d);font-weight:800}
+.mission{display:grid;user-select:none;grid-template-columns:64px 1fr 64px;gap:12px;align-items:center;width:100%;text-align:left;
+ background:#fff;border:3px solid var(--m);border-radius:24px;padding:12px;margin-bottom:12px;cursor:pointer;transition:transform .15s}
+.mission:active{transform:scale(.97)}
+.mission .em{font-size:38px;width:64px;height:64px;display:grid;place-content:center;background:var(--l);border-radius:18px}
+.mission b{display:block;font-size:20px;line-height:1.1}
+.mission small{color:var(--d);font-weight:700;font-size:14px}
+.mission .em{position:relative}
+.mission .em::after{content:"🔊";position:absolute;right:-6px;bottom:-6px;font-size:16px;background:#fff;border-radius:50%;width:26px;height:26px;display:grid;place-content:center;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.mission.talk{border-color:var(--d);box-shadow:0 0 0 4px var(--m)}
+.listen{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;border:0;background:var(--d);color:#fff;font-weight:800;font-size:20px;border-radius:24px;padding:14px;margin:4px 0 16px;cursor:pointer;min-height:64px}
+.words{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:-4px 0 14px}
+.word{border:3px solid var(--m);background:#fff;border-radius:20px;padding:10px 4px;text-align:center;cursor:pointer}
+.word .e{font-size:34px;line-height:1.1}
+.word .es{font-size:21px;font-weight:800;letter-spacing:1px;color:var(--ink);overflow-wrap:anywhere}
+.word .en{font-size:14px;font-weight:700;color:var(--d)}
+.tl div.ok span{color:#2E7D32}
+.tl div.ok s{font-size:11px;color:var(--ink);opacity:.6;display:block;font-weight:500}
+.mission small.okt{color:#2E7D32}
+.log{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:14px;overflow:hidden}
+.log th{background:var(--p);color:#fff;text-align:left;padding:6px 8px;font-size:13px}
+.log td{padding:6px 8px;border-bottom:1px dashed var(--m);vertical-align:middle}
+.log input[type=time]{font:inherit;font-size:16px;border:2px solid var(--m);border-radius:10px;padding:4px 6px;color:var(--d);font-weight:800;background:var(--xl);min-height:40px}
+.tl div.free{background:#FFFBEA;margin:0 -14px;padding:8px 14px}
+.tl div{cursor:pointer}
+.mission .star{width:58px;height:58px;border-radius:50%;border:3px dashed var(--p);background:#fff;cursor:pointer;padding:0;display:grid;place-content:center;font-size:30px;color:transparent}
+.mission.on{border-color:var(--g);background:#FFFBEA}
+.mission.on .star{border:0;background:var(--g);color:#fff;animation:pop .45s}
+@keyframes pop{0%{transform:scale(.3)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+.vid{display:flex;gap:10px;flex-wrap:wrap;margin:-4px 0 14px 4px}
+.vid a{flex:1 1 200px;display:flex;align-items:center;gap:8px;background:var(--d);color:#fff;text-decoration:none;font-weight:700;
+ padding:10px 14px;border-radius:16px;font-size:15px;min-height:48px}
+.vid a::before{content:"▶";font-size:13px;background:#fff;color:var(--d);width:26px;height:26px;border-radius:50%;display:grid;place-content:center;flex:none}
+.done-banner{background:var(--g);color:var(--ink);text-align:center;border-radius:24px;padding:16px;font-size:22px;font-weight:800;margin-bottom:14px}
+.tl{background:#fff;border-radius:22px;padding:6px 14px;border:2px solid var(--l)}
+.tl div{display:flex;gap:12px;padding:8px 0;border-bottom:1px dashed var(--m);font-size:15px}
+.tl div:last-child{border:0}
+.tl span{min-width:58px;font-weight:800;color:var(--d)}
+.daynav{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.daynav button{width:48px;height:48px;border-radius:50%;border:0;background:var(--l);color:var(--d);font-size:22px;font-weight:800;cursor:pointer}
+.daynav .t{text-align:center;font-weight:800;color:var(--d)}
+.daynav .t small{display:block;font-size:13px;color:var(--ink);font-weight:500}
+.album{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:8px}
+.album .h{font-size:12px;text-align:center;font-weight:800;color:var(--d)}
+.stk{aspect-ratio:1;border-radius:14px;background:#fff;border:2px dashed var(--m);display:grid;place-content:center;font-size:24px;position:relative}
+.stk.full{background:#FFFBEA;border:2px solid var(--g)}
+.stk.part{background:var(--l);border-style:solid}
+.stk small{position:absolute;bottom:1px;right:4px;font-size:10px;font-weight:800;color:var(--d)}
+.stk.today{outline:3px solid var(--d);outline-offset:1px}
+.wkrow{display:flex;align-items:center;justify-content:space-between;margin:14px 4px 6px;font-weight:800;color:var(--d)}
+.trophy{font-size:22px}
+.card{background:#fff;border:2px solid var(--m);border-radius:20px;margin-bottom:10px;overflow:hidden}
+.card>button{width:100%;display:flex;gap:10px;align-items:center;padding:12px;border:0;background:none;text-align:left;cursor:pointer}
+.date{min-width:54px;text-align:center;background:var(--l);border-radius:14px;padding:4px;font-weight:800;color:var(--d);line-height:1.1}
+.date small{display:block;font-size:12px;color:var(--ink)}
+.card .body{display:none;padding:0 14px 14px;font-size:15px}
+.card.open .body{display:block}
+.card .body p{margin:6px 0}
+.card .row{display:flex;gap:10px;padding:7px 0;border-bottom:1px dashed var(--m)}
+.card .row span{min-width:84px;font-weight:800;color:var(--d)}
+.card .row.k b::after{content:" ☐";color:var(--p)}
+.card .row.k.ok b::after{content:" ⭐"}
+.box{background:var(--l);border-radius:14px;padding:8px 12px;margin-top:6px}
+.wks{scrollbar-width:none;display:flex;gap:6px;overflow-x:auto;margin:0 0 10px;padding-bottom:4px}
+.wks button{flex:none;border:2px solid var(--p);background:#fff;color:var(--d);font-weight:800;padding:6px 14px;border-radius:99px;cursor:pointer;min-height:44px}
+.wks button.on{background:var(--d);color:#fff;border-color:var(--d)}
+.small{font-size:14px;color:var(--ink);opacity:.85}
+.btn{border:2px solid var(--d);background:#fff;color:var(--d);font-weight:800;border-radius:16px;padding:10px 16px;cursor:pointer;min-height:48px}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid var(--l);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 6px calc(6px + var(--sb));z-index:5}
+nav.tabs button{border:0;background:none;display:flex;flex-direction:column;align-items:center;font-size:12px;font-weight:800;color:var(--ink);opacity:.6;padding:4px;min-height:52px;cursor:pointer}
+nav.tabs button b{font-size:24px;line-height:1.1}
+nav.tabs button.on{opacity:1;color:var(--d)}
+.fx{position:fixed;inset:0;pointer-events:none;z-index:9;overflow:hidden}
+.fx span{position:absolute;font-size:30px;animation:fall 1.4s ease-in forwards}
+@keyframes fall{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(105vh) rotate(540deg);opacity:.2}}
+.modal{position:fixed;inset:0;background:rgba(74,14,43,.45);display:none;align-items:center;justify-content:center;z-index:10;padding:20px}
+.modal.on{display:flex}
+.modal div{background:#fff;border-radius:24px;padding:20px;max-width:340px;text-align:center}
+.modal .row2{display:flex;gap:10px;justify-content:center;margin-top:12px}
+@media (prefers-reduced-motion:reduce){.fx{display:none}.mission.on .star{animation:none}}
+</style></head><body>
+<header>
+  <h1 id="hello"></h1>
+  <p class="sub" id="hsub"></p>
+  <div class="jar"><div><div class="big" id="total">0</div><div class="lbl">estrellas</div></div>
+    <div class="meter"><i id="meter"></i></div><div class="lbl" id="pct"></div></div>
+</header>
+<main id="main"></main>
+<nav class="tabs" id="tabs">
+  <button data-t="hoy" class="on"><b>⭐</b>Hoy</button>
+  <button data-t="premios"><b>🏆</b>Premios</button>
+  <button data-t="semana"><b>📅</b>Semana</button>
+  <button data-t="papis"><b id="ptabE"></b><span id="ptabT"></span></button>
+</nav>
+<div class="fx" id="fx"></div>
+<div class="modal" id="modal"><div><p id="mtext"></p><div class="row2"><button class="btn" id="mno">Cancelar</button><button class="btn" id="myes">Sí</button></div></div></div>
+<script>
+{
+const D = __DATA__;
+const M = D.META;
+const NAME = M.nombre;
+const KEY = M.storageKey;
+let st = {};
+try { st = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { st = {}; }
+const mirror = () => { try { if (window.caches) caches.open("rutina-state").then(c => c.put("./state.json", new Response(JSON.stringify(st), {headers: {"Content-Type": "application/json"}}))).catch(() => {}); } catch (e) {} };
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} mirror(); };
+const VAPID = "__VAPID__";
+const esc = t => String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2, "0");
+const now = new Date();
+const todayIso = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`;
+let idx = D.S.findIndex(d => d.fecha === todayIso);
+if (idx < 0) idx = todayIso < D.S[0].fecha ? 0 : D.S.length - 1;
+const todayIdx = idx;
+let tab = "hoy", wk = Math.floor(idx / 7), opened = new Set();
+const STK = M.stickers || ["🦄","🐱","🌈","🦋","🐰","🍓","🐶","🌻","🐼","🍦","🎀","🐠","🌙","🐞","🍉","🦊","🐣","🌷","🧁","🐨","🎈","🐸","🍒","🦜","🌟","🐬","🍭","🏰"];
+const EMOB = b => b.emoji || EMO(b.titulo);
+const EMO = t => /Jardín/.test(t)?"🏫":/[Dd]esayun/.test(t)?"🥣":/Almuerzo/.test(t)?"🍽️":/Descanso/.test(t)?"🧸":/Merienda/.test(t)?"🥛":
+  /Plaza/.test(t)?"🛝":/Clase de inglés/.test(t)?"🇬🇧":/Tarea/.test(t)?"📒":/Baño/.test(t)?"🛁":/Cena/.test(t)?"🍝":
+  /dormir/.test(t)?"😴":/Tiempo libre|libre/.test(t)?"🎨":/Leo y hablo/.test(t)?"📚":/Lectoescritura/.test(t)?"🔤":/Inglés/.test(t)?"🇬🇧":/Lógica/.test(t)?"🧩":"🌸";
+const keys = d => d.bloques.filter(b => b.k).map(b => b.k);
+const hhmm = dt => `${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
+const toMin = t => { const m = /^(\d{1,2}):(\d{2})/.exec(t || ""); return m ? (+m[1]) * 60 + (+m[2]) : null; };
+const planStart = b => b.hora.split("–")[0];
+const planMin = b => b.hora === "Tarde" ? 15*60 : (b.hora === "Todo el día" ? 9*60 : (toMin(planStart(b)) ?? 0));
+const rec = k => (st[k] && typeof st[k] === "object") ? st[k] : null;
+function doneTxt(b, d){
+  const r = rec(b.k); if (!st[b.k]) return "";
+  if (!r) return "Hecho";
+  return `Hecho a las ${r.t}` + (r.f && r.f !== d.fecha ? ` (${r.f.slice(8,10)}/${r.f.slice(5,7)})` : "");
+}
+const effMin = (b, d) => { const r = b.k && rec(b.k); return r && (!r.f || r.f === d.fecha) ? toMin(r.t) : planMin(b); };
+const effHora = (b, d) => { const r = b.k && rec(b.k); return r && (!r.f || r.f === d.fecha) ? r.t : planStart(b); };
+const dayDone = d => keys(d).filter(k => st[k]).length;
+const kidName = b => { if (b.mision) return b.mision;
+  if (b.k.endsWith(":ses")) return {ABC:"Letras y palabras",ENG:"English time",LOG:"Desafío de lógica"}[b.k && D.S.find(x=>x.bloques.includes(b)).ses.area];
+  if (b.k.endsWith(":jardin")) return "Fui al jardín";
+  if (b.k.endsWith(":plaza")) return "¡A la plaza!";
+  if (b.k.endsWith(":clase")) return "Clase de inglés";
+  if (b.k.endsWith(":leo")) return "Leo y hablo inglés";
+  return b.titulo;
+};
+function totals(){
+  let tot = 0, done = 0;
+  D.S.forEach(d => keys(d).forEach(k => { tot++; if (st[k]) done++; }));
+  document.getElementById("total").textContent = done;
+  document.getElementById("meter").style.width = (tot ? done/tot*100 : 0) + "%";
+  document.getElementById("pct").textContent = `de ${tot}`;
+}
+const SYN = window.speechSynthesis;
+let ESV = [], VEN = null;
+const lang = v => (v.lang || "").replace("_","-").toLowerCase();
+function quality(v){
+  const n = (v.name || "").toLowerCase(), l = lang(v); let q = 0;
+  if (/premium|enhanced|mejorad|neural|natural|online|wavenet/.test(n)) q += 50;
+  if (/google/.test(n)) q += 30;
+  if (/paulina|m[oó]nica|helena|sabina|marisol|elvira|dalia|camila|valentina|isabela|francisca/.test(n)) q += 15;
+  if (/es-(ar|419|mx|us|co|cl)/.test(l)) q += 10;
+  if (/jorge|diego|juan|carlos|pablo|eddy|reed|rocko|grandpa|grandma|shelley|sandy|flo|bad|bahh|bells|boing|bubbles|cellos|wobble|jester|organ|superstar|trinoids|whisper|zarvox|albert|fred|junior|ralph|kathy/.test(n)) q -= 60;
+  return q;
+}
+function pickVoices(){
+  try {
+    const vs = SYN.getVoices() || [];
+    ESV = vs.filter(v => lang(v).startsWith("es")).sort((a,b) => quality(b) - quality(a));
+    const ens = vs.filter(v => lang(v).startsWith("en")).sort((a,b) => quality(b) - quality(a));
+    VEN = ens.find(v => lang(v) === "en-us") || ens[0] || null;
+  } catch (e) {}
+}
+const STYLES = [
+  {n:"Cálida", d:"Tranquila y cariñosa.", v:0, r:0.92, p:1.15, t:`¡Hola, ${NAME}! ${M.ejemploVoz[0]}`},
+  {n:"Alegre", d:"Más aguda y con energía.", v:1, r:1.0, p:1.35, t:`¡Buenas tardes, ${NAME}! ${M.ejemploVoz[1]}`},
+  {n:"Serena", d:"Pausada y suave, ideal para la noche.", v:0, r:0.85, p:1.0, t:`Buenas noches, ${NAME}. ${M.ejemploVoz[2]}`},
+  {n:"Divertida", d:"Rápida y juguetona.", v:2, r:1.05, p:1.25, t:`¡Muy bien, ${NAME}! ${M.ejemploVoz[3]}`},
+  {n:"Narradora", d:"Lenta y expresiva, con pausas.", v:1, r:0.82, p:1.1, t:M.ejemploVoz[4]},
+];
+let styleIdx = 0;
+try { styleIdx = +(localStorage.getItem(KEY + "-voz") || 0) || 0; } catch (e) {}
+const styleVoice = st => ESV.length ? ESV[Math.min(st.v, ESV.length - 1)] : null;
+if (SYN) { pickVoices(); try { SYN.onvoiceschanged = pickVoices; } catch (e) {} }
+function speak(text, onEnd, sty){
+  if (!SYN) return;
+  try {
+    SYN.cancel();
+    if (!ESV.length) pickVoices();
+    const S = sty || STYLES[styleIdx] || STYLES[0], VES = styleVoice(S);
+    const parts = String(text).split(/(\[[^\]]+\])/).filter(x => x.trim())
+      .flatMap(p => p.startsWith("[") ? [p] : p.split(/(?<=[.!?…])\s+/).filter(x => x.trim()));
+    parts.forEach((p, i) => {
+      const en = p.startsWith("[");
+      const u = new SpeechSynthesisUtterance(en ? p.slice(1, -1) : p);
+      u.lang = en ? "en-US" : (VES ? VES.lang : "es-AR");
+      const v = en ? VEN : VES; if (v) u.voice = v;
+      u.rate = en ? 0.8 : S.r; u.pitch = en ? Math.min(S.p, 1.2) : S.p;
+      if (i === parts.length - 1 && onEnd) u.onend = onEnd;
+      SYN.speak(u);
+    });
+  } catch (e) {}
+}
+function saludo(){
+  const h = new Date().getHours();
+  const base = h < 13 ? "Buen día" : h < 20 ? "Buenas tardes" : "Buenas noches";
+  let nombre = NAME;
+  try {
+    const hoy = todayIso, last = localStorage.getItem(KEY + "-mote");
+    if (M.apodos.length && last !== hoy && Math.random() < M.moteProb) {
+      nombre = M.apodos[Math.floor(Math.random() * M.apodos.length)];
+      localStorage.setItem(KEY + "-mote", hoy);
+    }
+  } catch (e) {}
+  return `¡${base}, ${nombre}!`;
+}
+let greeted = false;
+function talk(text, onEnd){
+  if (!greeted) { greeted = true; speak(saludo() + " " + text, onEnd); }
+  else speak(text, onEnd);
+}
+const PRAISE = M.elogios;
+const DIAS_L = {Lun:"lunes",Mar:"martes","Mié":"miércoles",Jue:"jueves",Vie:"viernes","Sáb":"sábado",Dom:"domingo"};
+function ding(big){
+  try {
+    const A = window.AudioContext || window.webkitAudioContext; if (!A) return;
+    const a = ding.ctx || (ding.ctx = new A());
+    (big ? [523,659,784,1047] : [784,1047]).forEach((f,i) => {
+      const o = a.createOscillator(), g = a.createGain();
+      o.type = "triangle"; o.frequency.value = f; o.connect(g); g.connect(a.destination);
+      const t = a.currentTime + i*0.11; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.25,t+0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001,t+0.35); o.start(t); o.stop(t+0.4);
+    });
+  } catch (e) {}
+}
+function rain(n, set){
+  const fx = document.getElementById("fx");
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement("span");
+    s.textContent = set[i % set.length];
+    s.style.left = Math.random()*95 + "vw"; s.style.top = (-10 - Math.random()*30) + "vh";
+    s.style.animationDelay = Math.random()*0.5 + "s";
+    fx.appendChild(s); setTimeout(() => s.remove(), 2100);
+  }
+}
+function vids(s){
+  return s ? `<div class="vid">${s.videos.map(v => `<a href="${esc(v[1])}" target="_blank" rel="noopener">${esc(v[0])}</a>`).join("")}</div>` : "";
+}
+function viewHoy(){
+  const d = D.S[idx], ks = keys(d), dn = dayDone(d);
+  const lbl = idx === todayIdx ? "Hoy" : (idx === todayIdx-1 ? "Ayer" : (idx === todayIdx+1 ? "Mañana" : d.dia));
+  let h = `<div class="daynav"><button id="prev" aria-label="Día anterior">‹</button>
+    <div class="t">${lbl} ${d.dia} ${d.fecha.slice(8,10)}/${d.fecha.slice(5,7)}${D.WEEKS[d.semana][2] ? `<small>${esc(M.focoLabel)}: ${esc(D.WEEKS[d.semana][2])}</small>` : ""}</div>
+    <button id="next" aria-label="Día siguiente">›</button></div>`;
+  if (ks.length && dn === ks.length) h += `<div class="done-banner">🎉 ¡Día completo! Ganaste el sticker ${STK[idx]}</div>`;
+  h += `<button class="listen" id="listen">🔊 Escuchar mi día</button>`;
+  h += `<h2>Mis misiones ⭐ ${dn}/${ks.length}</h2>`;
+  d.bloques.filter(b => b.k).forEach(b => {
+    const on = !!st[b.k], isS = b.k.endsWith(":ses");
+    h += `<div class="mission${on?" on":""}" role="button" tabindex="0" data-say="${b.k}" aria-label="Escuchar: ${esc(kidName(b))}">
+      <span class="em">${EMOB(b)}</span>
+      <span><b>${esc(kidName(b))}</b><small class="${on?"okt":""}">${on ? "✔ " + esc(doneTxt(b, d)) + " · plan " + esc(planStart(b)) : esc(b.hora)}${isS ? " · " + esc(d.ses.tema) : ""}</small></span>
+      <button class="star" data-k="${b.k}" aria-label="Marcar estrella">★</button></div>`;
+    if (isS) h += vids(d.ses);
+    if (b.palabras) h += `<div class="words">${b.palabras.map(w => `<div class="word" role="button" data-w-es="${esc(w[0])}" data-w-en="${esc(w[1])}"><div class="e">${w[2]}</div><div class="es">${esc(w[0])}</div><div class="en">${esc(w[1])}</div></div>`).join("")}</div>`;
+  });
+  if (!ks.length && d.dia === "Dom") h += `<div class="done-banner">🌸 Hoy es día libre. ¡A jugar!</div>`;
+  h += `<h2>Mi día</h2><p class="small">Tocá cualquier momento para escucharlo.</p><div class="tl">${d.bloques.map((b, bi) => ({b, bi})).sort((x, y) => effMin(x.b, d) - effMin(y.b, d) || x.bi - y.bi).map(({b, bi}) => {
+    const ok = b.k && st[b.k], moved = ok && rec(b.k) && effHora(b, d) !== planStart(b);
+    return `<div data-bi="${bi}" class="${b.libre?"free":""}${ok?" ok":""}"><span>${esc(effHora(b, d))}${moved?`<s>${esc(planStart(b))}</s>`:""}</span>${ok?"✔ ":""}${EMOB(b)} ${esc(b.k && b.k.endsWith(":ses") ? kidName(b) : b.titulo)}</div>`;
+  }).join("")}</div>`;
+  return h;
+}
+function viewPremios(){
+  let h = `<h2>Mi álbum de stickers</h2><p class="small">Cada día completo pega un sticker. Si la semana tiene 5 días completos, ¡gana un trofeo!</p>`;
+  D.WEEKS.forEach((w, wi) => {
+    const days = D.S.slice(wi*7, wi*7+7);
+    const full = days.filter(d => keys(d).length && dayDone(d) === keys(d).length).length;
+    h += `<div class="wkrow"><span>${esc(w[0])} · ${esc(w[1])}</span><span class="trophy">${full >= 5 ? "🏆" : full + "/5"}</span></div><div class="album">`;
+    h += ["L","M","M","J","V","S","D"].map(x => `<div class="h">${x}</div>`).join("");
+    days.forEach((d, i) => {
+      const gi = wi*7+i, ks = keys(d), dn = dayDone(d);
+      const cls = !ks.length ? "" : dn === ks.length ? "full" : dn ? "part" : "";
+      const em = !ks.length ? "🌸" : dn === ks.length ? STK[gi] : dn ? "⭐" : (gi > todayIdx ? "❔" : "");
+      h += `<div class="stk ${cls}${gi===todayIdx?" today":""}">${em}<small>${d.fecha.slice(8,10)}</small></div>`;
+    });
+    h += `</div>`;
+  });
+  return h;
+}
+function wkButtons(){ return `<div class="wks">${D.WEEKS.map((w,i)=>`<button data-w="${i}" class="${i===wk?"on":""}">${esc(w[0])}</button>`).join("")}</div>`; }
+function viewSemana(){
+  let h = `<h2>Mi semana</h2>` + wkButtons();
+  D.S.slice(wk*7, wk*7+7).forEach((d, i) => {
+    const gi = wk*7+i, ks = keys(d), dn = dayDone(d);
+    h += `<div class="card"><button data-go="${gi}"><div class="date">${d.fecha.slice(8,10)}/${d.fecha.slice(5,7)}<small>${d.dia}</small></div>
+      <div style="flex:1"><b>${d.ses ? EMO(D.AREAS[d.ses.area][0]) + " " + esc(d.ses.tema) : (d.dia==="Dom" ? "Día libre 🌸" : "Arranque de la rutina 🌸")}</b><div class="small">${d.plaza?"🛝 Plaza · ":""}${d.clase?"🇬🇧 Clase + tarea · ":""}⭐ ${dn}/${ks.length}</div></div>
+      <b style="color:var(--d)">›</b></button></div>`;
+  });
+  return h;
+}
+function viewPapis(){
+  let h = `<h2>${esc(M.padresTitulo)}</h2><p class="small">${esc(M.padresIntro)}</p><p class="small" style="display:none">Cada sesión dura 20–25 minutos: 5 de video, 15 de actividad y 5 de cierre. Lunes y miércoles la sesión pasa a las 20:00 (después de la clase y el baño) y sigue «Leo y hablo inglés»: lee 3 palabras en español y las dice en inglés (si la maestra dio tarea, se hace ahí). Los links abren YouTube; si tienen YouTube Kids, mejor.</p>` + wkButtons();
+  D.S.slice(wk*7, wk*7+7).forEach(d => {
+    const s = d.ses, o = opened.has(d.fecha);
+    h += `<div class="card${o?" open":""}"><button data-open="${d.fecha}"><div class="date">${d.fecha.slice(8,10)}/${d.fecha.slice(5,7)}<small>${d.dia}</small></div>
+      <div style="flex:1"><b>${s ? esc(D.AREAS[s.area][0] + ": " + s.tema) : (d.dia==="Dom" ? "Día libre" : "Arranque de la rutina")}</b><div class="small">⭐ ${dayDone(d)}/${keys(d).length}</div></div><b style="color:var(--d)">${o?"–":"+"}</b></button>
+      <div class="body">${s ? `<div class="box"><p><b>Objetivo:</b> ${esc(s.objetivo)}</p><p><b>Actividad (15'):</b> ${esc(s.actividad)}</p>
+        <p><b>Cierre (5'):</b> ${esc(s.cierre)}</p><p><b>Materiales:</b> ${esc(s.material)}</p></div>${vids(s)}` : ""}
+      ${d.bloques.map(b => `<div class="row${b.k?" k":""}${b.k&&st[b.k]?" ok":""}"><span>${esc(b.hora)}</span><div><b>${esc(b.titulo)}</b>${b.k&&st[b.k]?`<div class="small" style="color:#2E7D32;font-weight:700">✔ ${esc(doneTxt(b, d))}</div>`:""}${b.det?`<div class="small">${esc(b.det)}</div>`:""}</div></div>`).join("")}
+      </div></div>`;
+  });
+  if (M.avisos && /netlify\.app$/.test(location.hostname)) h += `<h2 style="margin-top:22px">🔔 Avisos</h2>
+    <div class="box"><p>Le llega una notificación a la hora de cada misión (sesión, plaza, «Leo y hablo») y 15 minutos antes de la clase de inglés, aunque la app esté cerrada.</p>
+    <p class="small">En iPhone funciona solo con la app agregada a la pantalla de inicio (iOS 16.4 o más nuevo).</p>
+    <p style="text-align:center"><input id="npin" inputmode="numeric" autocomplete="off" placeholder="PIN de avisos" style="font:inherit;font-size:16px;border:2px solid var(--m);border-radius:12px;padding:8px 12px;width:150px;margin-right:6px"><button class="btn" id="notif">${notifLabel()}</button></p><p class="small" id="nstat" style="text-align:center"></p></div>`;
+  const rows = [];
+  D.S.slice(wk*7, wk*7+7).forEach(d => d.bloques.filter(b => b.k && st[b.k]).forEach(b => rows.push({d, b})));
+  h += `<h2 style="margin-top:22px">🕒 Registro de horarios</h2>
+    <p class="small">Cada estrella guarda la hora en que se marcó, y esa hora pasa a ser el horario de la tarea en «Mi día». Si la marcaron más tarde, corregí la hora acá.</p>`;
+  h += rows.length ? `<table class="log"><thead><tr><th>Día</th><th>Tarea</th><th>Plan</th><th>Hecho</th></tr></thead><tbody>${rows.map(({d, b}) => {
+      const r = rec(b.k);
+      return `<tr><td>${d.dia} ${d.fecha.slice(8,10)}/${d.fecha.slice(5,7)}</td><td>${EMOB(b)} ${esc(kidName(b))}</td><td>${esc(planStart(b))}</td>
+        <td><input type="time" value="${r ? esc(r.t) : ""}" data-edit="${b.k}" aria-label="Hora en que se hizo"></td></tr>`;
+    }).join("")}</tbody></table>
+    <p style="text-align:center"><button class="btn" id="copylog">📋 Copiar registro de la semana</button></p>`
+    : `<div class="box"><p>Todavía no hay tareas marcadas esta semana.</p></div>`;
+  h += `<h2 style="margin-top:22px">🔊 Elegí la voz</h2>
+    <p class="small">Escuchá los 5 ejemplos y elegí el que más te guste. Se usan las voces que tiene instalado este teléfono. ${SYN ? "" : "<b>Este navegador no tiene voz; abrí la app en Chrome o Safari.</b>"}</p>`;
+  if (SYN && !ESV.length) pickVoices();
+  STYLES.forEach((S, i) => {
+    const v = styleVoice(S);
+    h += `<div class="card" style="padding:12px;${i===styleIdx?"border-color:var(--d);border-width:3px":""}">
+      <b>${i+1}. ${esc(S.n)}</b> ${i===styleIdx?"✅":""}<div class="small">${esc(S.d)}${v ? " · Voz: " + esc(v.name) : ""}</div>
+      <div style="display:flex;gap:8px;margin-top:8px"><button class="btn" style="flex:1" data-play="${i}">▶ Escuchar</button>
+      <button class="btn" style="flex:1;${i===styleIdx?"background:var(--d);color:#fff":""}" data-pick="${i}">${i===styleIdx?"Elegida":"Elegir"}</button></div></div>`;
+  });
+  h += `<div class="box"><p><b>Para que suene menos robótica:</b></p>
+    <p>• <b>iPhone:</b> Configuración → Accesibilidad → Contenido leído → Voces → Español → bajá una voz «Mejorada» o «Premium» (por ejemplo Paulina o Mónica). Después volvé acá y elegí de nuevo.</p>
+    <p>• <b>Android:</b> Configuración → Accesibilidad → Salida de texto a voz → Motor de Google → Español (Estados Unidos o España) → bajá una voz de alta calidad.</p>
+    <p>• Si no se escucha nada, revisá que el teléfono no esté en silencio.</p></div>`;
+  h += `<p style="text-align:center;margin-top:20px"><button class="btn" id="reset">Borrar todas las estrellas</button></p>
+    <p class="small" style="text-align:center">Las estrellas se guardan en este teléfono.</p>`;
+  return h;
+}
+function render(){
+  const m = document.getElementById("main");
+  m.innerHTML = tab === "hoy" ? viewHoy() : tab === "premios" ? viewPremios() : tab === "semana" ? viewSemana() : viewPapis();
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === tab));
+  const hh = new Date().getHours();
+  document.getElementById("hello").textContent = `¡${hh < 13 ? "Buen día" : hh < 20 ? "Buenas tardes" : "Buenas noches"}, ${NAME}! ${M.emoji}`;
+  const d = D.S[todayIdx];
+  document.getElementById("hsub").textContent = `${d.ses ? "Hoy: " + d.ses.tema : (keys(d).length ? "¡Vamos con tu rutina!" : "Hoy es día libre")} · ${M.lema}`;
+  totals(); bind();
+}
+function bind(){
+  const q = s => document.querySelectorAll(s);
+  const p = document.getElementById("prev"), n = document.getElementById("next");
+  if (p) p.onclick = () => { if (idx > 0) { idx--; render(); } };
+  if (n) n.onclick = () => { if (idx < D.S.length-1) { idx++; render(); } };
+  const d = D.S[idx];
+  const blk = k => d.bloques.find(b => b.k === k);
+  q(".mission").forEach(m => m.onclick = () => {
+    q(".mission.talk").forEach(x => x.classList.remove("talk")); m.classList.add("talk");
+    talk(blk(m.dataset.say).voz, () => m.classList.remove("talk"));
+  });
+  q(".mission .star").forEach(b => b.onclick = e => {
+    e.stopPropagation();
+    const k = b.dataset.k;
+    if (st[k]) delete st[k]; else { const n = new Date(); st[k] = { t: hhmm(n), f: todayIso, at: n.toISOString() }; }
+    save();
+    if (st[k]) {
+      const full = dayDone(d) === keys(d).length;
+      ding(full); rain(full ? 40 : 12, full ? ["⭐","🌸","🎉",STK[idx]] : ["⭐","✨"]);
+      setTimeout(() => speak(full ? M.diaCompleto : PRAISE[Math.floor(Math.random()*PRAISE.length)]), 350);
+    }
+    render();
+  });
+  q(".word").forEach(w => w.onclick = () => speak(`${w.dataset.wEs.toLowerCase()}. [${w.dataset.wEn}]`));
+  q("[data-bi]").forEach(r => r.onclick = () => talk(d.bloques[+r.dataset.bi].voz));
+  const ls = document.getElementById("listen");
+  if (ls) ls.onclick = () => {
+    const ms = d.bloques.filter(b => b.k && !st[b.k]).map(b => kidName(b));
+    const lbl = idx === todayIdx ? "Hoy es" : "Este día es";
+    greeted = true;
+    speak(`${saludo()} ${lbl} ${DIAS_L[d.dia]}. ` + (keys(d).length ? (ms.length ? `Te faltan estas misiones: ${ms.join(", ")}. Tocá cada misión para escuchar qué hacer, y cuando termines tocá la estrella.` : "¡Ya completaste todas tus misiones! Ahora podés jugar a lo que quieras.") : "Hoy es día libre. ¡A jugar!"));
+  };
+  const nb = document.getElementById("notif");
+  if (nb) nb.onclick = () => enablePush(nb, document.getElementById("nstat"));
+  q("[data-edit]").forEach(inp => inp.onchange = () => {
+    const k = inp.dataset.edit; if (!inp.value) return;
+    const f = k.slice(0, 10), r = rec(k) || {};
+    st[k] = { t: inp.value, f, at: r.at || null, editado: true }; save(); render();
+  });
+  const cp = document.getElementById("copylog");
+  if (cp) cp.onclick = () => {
+    const lines = [`Registro de ${NAME} · ${D.WEEKS[wk][0]} (${D.WEEKS[wk][1]})`];
+    D.S.slice(wk*7, wk*7+7).forEach(d => d.bloques.filter(b => b.k).forEach(b => {
+      lines.push(`${d.dia} ${d.fecha.slice(8,10)}/${d.fecha.slice(5,7)} · ${kidName(b)} · plan ${planStart(b)} · ${st[b.k] ? doneTxt(b, d) : "pendiente"}`);
+    }));
+    const txt = lines.join("\n");
+    try { navigator.clipboard.writeText(txt).then(() => { cp.textContent = "✔ Copiado"; }, () => { cp.textContent = "No se pudo copiar"; }); } catch (e) { cp.textContent = "No se pudo copiar"; }
+  };
+  q("[data-play]").forEach(b => b.onclick = () => { const S = STYLES[+b.dataset.play]; speak(S.t, null, S); });
+  q("[data-pick]").forEach(b => b.onclick = () => {
+    styleIdx = +b.dataset.pick; try { localStorage.setItem(KEY + "-voz", styleIdx); } catch (e) {}
+    speak("¡Listo! Desde ahora voy a hablar así.", null, STYLES[styleIdx]); render();
+  });
+  q("[data-w]").forEach(b => b.onclick = () => { wk = +b.dataset.w; render(); });
+  q("[data-go]").forEach(b => b.onclick = () => { idx = +b.dataset.go; tab = "hoy"; render(); window.scrollTo(0,0); });
+  q("[data-open]").forEach(b => b.onclick = () => { const f = b.dataset.open; opened.has(f) ? opened.delete(f) : opened.add(f); render(); });
+  const r = document.getElementById("reset");
+  if (r) r.onclick = () => ask(`¿Borrar todas las estrellas de ${NAME}?`, () => { st = {}; save(); render(); });
+}
+function notifLabel(){
+  if (!("Notification" in window) || !("serviceWorker" in navigator) || !("PushManager" in window)) return "Avisos no disponibles en este navegador";
+  return Notification.permission === "granted" && localStorage.getItem(KEY + "-push") ? "✅ Avisos activados · probar de nuevo" : "🔔 Activar avisos";
+}
+async function enablePush(btn, stat){
+  const say = t => { if (stat) stat.textContent = t; };
+  try {
+    if (!("serviceWorker" in navigator) || !("PushManager" in window)) { say("Este navegador no permite avisos. En iPhone, abrí la app desde el ícono de la pantalla de inicio."); return; }
+    const perm = await Notification.requestPermission();
+    if (perm !== "granted") { say("No se dio permiso. Podés habilitarlo en Configuración → Notificaciones."); return; }
+    const reg = await navigator.serviceWorker.ready;
+    const key = Uint8Array.from(atob(VAPID.replace(/-/g, "+").replace(/_/g, "/")), c => c.charCodeAt(0));
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
+    const r = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ subscription: sub.toJSON(), pin: (document.getElementById("npin") || {}).value || "" }) });
+    if (r.status === 403) { say("El PIN no es correcto."); return; }
+    if (!r.ok) throw new Error("servidor " + r.status);
+    try { localStorage.setItem(KEY + "-push", "1"); } catch (e) {}
+    reg.showNotification("⭐ ¡Avisos activados!", { body: `Así van a llegar los recordatorios de ${NAME}.`, icon: "icon-192.png" });
+    say("Listo: los avisos quedaron activados en este teléfono.");
+    if (btn) btn.textContent = notifLabel();
+  } catch (e) { say("No se pudieron activar los avisos (" + (e && e.message ? e.message : e) + ")."); }
+}
+function ask(t, yes){
+  const md = document.getElementById("modal");
+  document.getElementById("mtext").textContent = t; md.classList.add("on");
+  document.getElementById("mno").onclick = () => md.classList.remove("on");
+  document.getElementById("myes").onclick = () => { md.classList.remove("on"); yes(); };
+}
+document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
+  tab = b.dataset.t; if (tab === "hoy") idx = todayIdx; if (tab === "semana" || tab === "papis") wk = Math.floor(todayIdx/7);
+  render(); window.scrollTo(0,0);
+});
+document.getElementById("ptabE").textContent = M.padresEmoji; document.getElementById("ptabT").textContent = M.padresTab;
+render(); mirror();
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+  try { navigator.serviceWorker.register("sw.js").catch(() => {}); } catch (e) {}
+}
+}
+</script></body></html>

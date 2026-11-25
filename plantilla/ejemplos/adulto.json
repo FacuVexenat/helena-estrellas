@@ -1,0 +1,604 @@
+{
+ "slug": "laura-mi-semana",
+ "perfil": {
+  "nombre": "Laura",
+  "apodos": [],
+  "emoji": "✨"
+ },
+ "app": {
+  "titulo": "Mi semana · Laura",
+  "corto": "Mi semana",
+  "letra": "L",
+  "colores": {
+   "d": "#00796B",
+   "p": "#4DB6AC",
+   "m": "#B2DFDB",
+   "l": "#E0F2F1",
+   "xl": "#F4FBFA",
+   "ink": "#0D3B36",
+   "g": "#FF8A65"
+  },
+  "stickers": [
+   "🌿",
+   "☀️",
+   "📚",
+   "🧘",
+   "💼",
+   "🏋️",
+   "🎯",
+   "💧",
+   "🌱",
+   "🍵",
+   "✨",
+   "🌻",
+   "🏃",
+   "📈",
+   "🧠",
+   "🎧",
+   "🌙",
+   "🍎",
+   "🚲",
+   "🖋️",
+   "🌊",
+   "⛰️",
+   "🌸",
+   "🏆",
+   "💡",
+   "🫶",
+   "🌈",
+   "🔥"
+  ],
+  "foco_label": "Foco de la semana",
+  "lema": "Pequeños pasos, todos los días.",
+  "elogios": [
+   "¡Bien, Laura! Un hábito más.",
+   "Sumaste constancia.",
+   "¡Excelente! Seguimos."
+  ],
+  "dia_completo": "Día completo, Laura. Cuidaste tu cuerpo, tu mente y tu trabajo.",
+  "cierre_voz": "Cuando termines, marcá la estrella.",
+  "ejemplo_voz": [
+   "Arranca tu bloque de foco: una sola tarea.",
+   "¿Lista para entrenar? ¡Vamos!",
+   "Hora de leer veinte minutos, sin pantallas.",
+   "¡Sumaste una estrella!",
+   "Respirá… soltá… y empezá de nuevo."
+  ],
+  "avisos": true
+ },
+ "inicio": "2026-12-07",
+ "semanas": 4,
+ "foco_semanal": [
+  "Arrancar",
+  "Constancia",
+  "Subir intensidad",
+  "Revisión"
+ ],
+ "areas": {
+  "MED": {
+   "nombre": "Meditación",
+   "emoji": "🧘",
+   "mision": "10 min de meditación"
+  },
+  "GYM": {
+   "nombre": "Entrenamiento",
+   "emoji": "🏋️",
+   "mision": "Entrenamiento"
+  },
+  "EST": {
+   "nombre": "Inglés",
+   "emoji": "🇬🇧",
+   "mision": "25 min de inglés"
+  },
+  "FIN": {
+   "nombre": "Finanzas",
+   "emoji": "💰",
+   "mision": "Revisar finanzas"
+  }
+ },
+ "semana_tipo": {
+  "lun": [
+   {
+    "hora": "6:45",
+    "titulo": "Despertar + agua",
+    "emoji": "🌅"
+   },
+   {
+    "hora": "7:00–7:10",
+    "pool": "MED",
+    "aviso": true
+   },
+   {
+    "hora": "7:30",
+    "titulo": "Desayuno",
+    "emoji": "☕"
+   },
+   {
+    "hora": "9:00–11:00",
+    "titulo": "Bloque de foco (trabajo profundo)",
+    "emoji": "🎯",
+    "mision": "2 h de foco sin distracciones",
+    "id": "foco",
+    "aviso": true,
+    "voz": "Arranca tu bloque de foco: dos horas, celular lejos y una sola tarea."
+   },
+   {
+    "hora": "13:00",
+    "titulo": "Almuerzo + 10 min de caminata",
+    "emoji": "🥗",
+    "mision": "Caminata post-almuerzo",
+    "id": "caminata"
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "GYM",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00–20:25",
+    "pool": "EST",
+    "aviso": true
+   },
+   {
+    "hora": "21:00",
+    "titulo": "Cena",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "22:30–22:50",
+    "titulo": "Lectura (sin pantallas)",
+    "emoji": "📖",
+    "mision": "20 min de lectura",
+    "id": "lectura",
+    "aviso": -5,
+    "voz": "Hora de leer veinte minutos. Pantallas afuera."
+   },
+   {
+    "hora": "23:15",
+    "titulo": "A dormir",
+    "emoji": "😴"
+   }
+  ],
+  "mar": [
+   {
+    "hora": "6:45",
+    "titulo": "Despertar + agua",
+    "emoji": "🌅"
+   },
+   {
+    "hora": "7:00–7:10",
+    "pool": "MED",
+    "aviso": true
+   },
+   {
+    "hora": "7:30",
+    "titulo": "Desayuno",
+    "emoji": "☕"
+   },
+   {
+    "hora": "9:00–11:00",
+    "titulo": "Bloque de foco (trabajo profundo)",
+    "emoji": "🎯",
+    "mision": "2 h de foco sin distracciones",
+    "id": "foco",
+    "aviso": true,
+    "voz": "Arranca tu bloque de foco: dos horas, celular lejos y una sola tarea."
+   },
+   {
+    "hora": "13:00",
+    "titulo": "Almuerzo + 10 min de caminata",
+    "emoji": "🥗",
+    "mision": "Caminata post-almuerzo",
+    "id": "caminata"
+   },
+   {
+    "hora": "18:30–19:00",
+    "titulo": "Caminata o bici",
+    "emoji": "🚶",
+    "mision": "30 min de movimiento",
+    "id": "mov"
+   },
+   {
+    "hora": "20:00–20:25",
+    "pool": "EST",
+    "aviso": true
+   },
+   {
+    "hora": "21:00",
+    "titulo": "Cena",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "22:30–22:50",
+    "titulo": "Lectura (sin pantallas)",
+    "emoji": "📖",
+    "mision": "20 min de lectura",
+    "id": "lectura",
+    "aviso": -5,
+    "voz": "Hora de leer veinte minutos. Pantallas afuera."
+   },
+   {
+    "hora": "23:15",
+    "titulo": "A dormir",
+    "emoji": "😴"
+   }
+  ],
+  "mie": [
+   {
+    "hora": "6:45",
+    "titulo": "Despertar + agua",
+    "emoji": "🌅"
+   },
+   {
+    "hora": "7:00–7:10",
+    "pool": "MED",
+    "aviso": true
+   },
+   {
+    "hora": "7:30",
+    "titulo": "Desayuno",
+    "emoji": "☕"
+   },
+   {
+    "hora": "9:00–11:00",
+    "titulo": "Bloque de foco (trabajo profundo)",
+    "emoji": "🎯",
+    "mision": "2 h de foco sin distracciones",
+    "id": "foco",
+    "aviso": true,
+    "voz": "Arranca tu bloque de foco: dos horas, celular lejos y una sola tarea."
+   },
+   {
+    "hora": "13:00",
+    "titulo": "Almuerzo + 10 min de caminata",
+    "emoji": "🥗",
+    "mision": "Caminata post-almuerzo",
+    "id": "caminata"
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "GYM",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00–20:25",
+    "pool": "EST",
+    "aviso": true
+   },
+   {
+    "hora": "21:00",
+    "titulo": "Cena",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "22:30–22:50",
+    "titulo": "Lectura (sin pantallas)",
+    "emoji": "📖",
+    "mision": "20 min de lectura",
+    "id": "lectura",
+    "aviso": -5,
+    "voz": "Hora de leer veinte minutos. Pantallas afuera."
+   },
+   {
+    "hora": "23:15",
+    "titulo": "A dormir",
+    "emoji": "😴"
+   }
+  ],
+  "jue": [
+   {
+    "hora": "6:45",
+    "titulo": "Despertar + agua",
+    "emoji": "🌅"
+   },
+   {
+    "hora": "7:00–7:10",
+    "pool": "MED",
+    "aviso": true
+   },
+   {
+    "hora": "7:30",
+    "titulo": "Desayuno",
+    "emoji": "☕"
+   },
+   {
+    "hora": "9:00–11:00",
+    "titulo": "Bloque de foco (trabajo profundo)",
+    "emoji": "🎯",
+    "mision": "2 h de foco sin distracciones",
+    "id": "foco",
+    "aviso": true,
+    "voz": "Arranca tu bloque de foco: dos horas, celular lejos y una sola tarea."
+   },
+   {
+    "hora": "13:00",
+    "titulo": "Almuerzo + 10 min de caminata",
+    "emoji": "🥗",
+    "mision": "Caminata post-almuerzo",
+    "id": "caminata"
+   },
+   {
+    "hora": "18:30–19:00",
+    "titulo": "Caminata o bici",
+    "emoji": "🚶",
+    "mision": "30 min de movimiento",
+    "id": "mov"
+   },
+   {
+    "hora": "20:00–20:25",
+    "pool": "EST",
+    "aviso": true
+   },
+   {
+    "hora": "21:00",
+    "titulo": "Cena",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "22:30–22:50",
+    "titulo": "Lectura (sin pantallas)",
+    "emoji": "📖",
+    "mision": "20 min de lectura",
+    "id": "lectura",
+    "aviso": -5,
+    "voz": "Hora de leer veinte minutos. Pantallas afuera."
+   },
+   {
+    "hora": "23:15",
+    "titulo": "A dormir",
+    "emoji": "😴"
+   }
+  ],
+  "vie": [
+   {
+    "hora": "6:45",
+    "titulo": "Despertar + agua",
+    "emoji": "🌅"
+   },
+   {
+    "hora": "7:00–7:10",
+    "pool": "MED",
+    "aviso": true
+   },
+   {
+    "hora": "7:30",
+    "titulo": "Desayuno",
+    "emoji": "☕"
+   },
+   {
+    "hora": "9:00–11:00",
+    "titulo": "Bloque de foco (trabajo profundo)",
+    "emoji": "🎯",
+    "mision": "2 h de foco sin distracciones",
+    "id": "foco",
+    "aviso": true,
+    "voz": "Arranca tu bloque de foco: dos horas, celular lejos y una sola tarea."
+   },
+   {
+    "hora": "13:00",
+    "titulo": "Almuerzo + 10 min de caminata",
+    "emoji": "🥗",
+    "mision": "Caminata post-almuerzo",
+    "id": "caminata"
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "GYM",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00–20:25",
+    "pool": "FIN",
+    "aviso": true
+   },
+   {
+    "hora": "21:00",
+    "titulo": "Cena",
+    "emoji": "🍽️"
+   },
+   {
+    "hora": "22:30–22:50",
+    "titulo": "Lectura (sin pantallas)",
+    "emoji": "📖",
+    "mision": "20 min de lectura",
+    "id": "lectura",
+    "aviso": -5,
+    "voz": "Hora de leer veinte minutos. Pantallas afuera."
+   },
+   {
+    "hora": "23:15",
+    "titulo": "A dormir",
+    "emoji": "😴"
+   }
+  ],
+  "sab": [
+   {
+    "hora": "9:00",
+    "titulo": "Desayuno sin apuro",
+    "emoji": "🥐"
+   },
+   {
+    "hora": "10:00–10:10",
+    "pool": "MED"
+   },
+   {
+    "hora": "11:00–12:00",
+    "pool": "GYM",
+    "aviso": -30
+   },
+   {
+    "hora": "Tarde",
+    "titulo": "Libre",
+    "emoji": "🎉",
+    "libre": true
+   }
+  ],
+  "dom": [
+   {
+    "hora": "Todo el día",
+    "titulo": "Descanso",
+    "emoji": "🌿",
+    "libre": true
+   },
+   {
+    "hora": "19:00–19:20",
+    "titulo": "Planificar la semana",
+    "emoji": "🗓️",
+    "mision": "Plan semanal listo",
+    "id": "plan",
+    "aviso": true,
+    "voz": "Tomate veinte minutos para planificar la semana: tres prioridades y tus horarios de entrenamiento."
+   }
+  ]
+ },
+ "pools": {
+  "MED": [
+   {
+    "tema": "Respiración consciente",
+    "objetivo": "Bajar el estrés y arrancar con foco.",
+    "videos": [
+     [
+      "Respiración consciente",
+      "https://www.youtube.com/results?search_query=meditacion+guiada+10+minutos+respiracion"
+     ]
+    ],
+    "actividad": "Sentate cómoda, cerrá los ojos y seguí el audio.",
+    "cierre": "Anotá una intención para hoy.",
+    "material": "Auriculares",
+    "voz": "Diez minutos para vos: respiración consciente."
+   },
+   {
+    "tema": "Escaneo corporal",
+    "objetivo": "Bajar el estrés y arrancar con foco.",
+    "videos": [
+     [
+      "Escaneo corporal",
+      "https://www.youtube.com/results?search_query=body+scan+10+minutos+espa%C3%B1ol"
+     ]
+    ],
+    "actividad": "Sentate cómoda, cerrá los ojos y seguí el audio.",
+    "cierre": "Anotá una intención para hoy.",
+    "material": "Auriculares",
+    "voz": "Diez minutos para vos: escaneo corporal."
+   },
+   {
+    "tema": "Gratitud",
+    "objetivo": "Bajar el estrés y arrancar con foco.",
+    "videos": [
+     [
+      "Gratitud",
+      "https://www.youtube.com/results?search_query=meditacion+gratitud+10+minutos"
+     ]
+    ],
+    "actividad": "Sentate cómoda, cerrá los ojos y seguí el audio.",
+    "cierre": "Anotá una intención para hoy.",
+    "material": "Auriculares",
+    "voz": "Diez minutos para vos: gratitud."
+   }
+  ],
+  "GYM": [
+   {
+    "tema": "Tren inferior",
+    "objetivo": "Fuerza general, 45–60 min.",
+    "videos": [
+     [
+      "Tren inferior",
+      "https://www.youtube.com/results?search_query=rutina+piernas+gluteos+gimnasio"
+     ]
+    ],
+    "actividad": "Sentadilla 4×10 · Hip thrust 4×10 · Estocadas 3×10 · Abductores 3×15",
+    "cierre": "Estirar 5 minutos.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Tren inferior. Calentá y arrancamos."
+   },
+   {
+    "tema": "Tren superior",
+    "objetivo": "Fuerza general, 45–60 min.",
+    "videos": [
+     [
+      "Tren superior",
+      "https://www.youtube.com/results?search_query=rutina+tren+superior+mujeres"
+     ]
+    ],
+    "actividad": "Remo 4×10 · Press mancuernas 3×10 · Jalón 3×12 · Plancha 3×40 s",
+    "cierre": "Estirar 5 minutos.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Tren superior. Calentá y arrancamos."
+   },
+   {
+    "tema": "Full body",
+    "objetivo": "Fuerza general, 45–60 min.",
+    "videos": [
+     [
+      "Full body",
+      "https://www.youtube.com/results?search_query=rutina+full+body+45+minutos"
+     ]
+    ],
+    "actividad": "Peso muerto rumano 3×10 · Press militar 3×10 · Remo 3×12 · Core 10 min",
+    "cierre": "Estirar 5 minutos.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Full body. Calentá y arrancamos."
+   }
+  ],
+  "EST": [
+   {
+    "tema": "Listening",
+    "objetivo": "Entender audio real.",
+    "videos": [
+     [
+      "Listening",
+      "https://www.youtube.com/results?search_query=english+listening+practice+intermediate"
+     ]
+    ],
+    "actividad": "Mirar el video con subtítulos en inglés y repetir frases.",
+    "cierre": "Anotá 5 palabras nuevas.",
+    "material": "Cuaderno",
+    "voz": "Veinticinco minutos de inglés: Listening."
+   },
+   {
+    "tema": "Vocabulario de trabajo",
+    "objetivo": "Frases para reuniones.",
+    "videos": [
+     [
+      "Vocabulario de trabajo",
+      "https://www.youtube.com/results?search_query=business+english+phrases+meetings"
+     ]
+    ],
+    "actividad": "Escribir 5 frases que usarías en una reunión.",
+    "cierre": "Anotá 5 palabras nuevas.",
+    "material": "Cuaderno",
+    "voz": "Veinticinco minutos de inglés: Vocabulario de trabajo."
+   },
+   {
+    "tema": "Speaking",
+    "objetivo": "Soltar la lengua.",
+    "videos": [
+     [
+      "Speaking",
+      "https://www.youtube.com/results?search_query=english+speaking+practice+shadowing"
+     ]
+    ],
+    "actividad": "Shadowing: repetir en voz alta 10 minutos.",
+    "cierre": "Anotá 5 palabras nuevas.",
+    "material": "Cuaderno",
+    "voz": "Veinticinco minutos de inglés: Speaking."
+   }
+  ],
+  "FIN": [
+   {
+    "tema": "Revisión semanal de gastos",
+    "objetivo": "Saber en qué se fue la plata.",
+    "videos": [
+     [
+      "Presupuesto personal",
+      "https://www.youtube.com/results?search_query=como+hacer+presupuesto+personal"
+     ]
+    ],
+    "actividad": "Cargar los gastos de la semana y compararlos con el presupuesto.",
+    "cierre": "Elegir un gasto para recortar la semana que viene.",
+    "material": "Planilla de gastos",
+    "voz": "Viernes de finanzas: veinticinco minutos para revisar tus gastos."
+   }
+  ]
+ }
+}

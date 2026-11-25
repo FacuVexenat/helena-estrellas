@@ -1,0 +1,433 @@
+{
+ "slug": "martin-entrena",
+ "perfil": {
+  "nombre": "Martín",
+  "apodos": [
+   "crack",
+   "campeón"
+  ],
+  "prob_apodo": 0.08,
+  "emoji": "💪"
+ },
+ "app": {
+  "titulo": "Martín Entrena",
+  "corto": "Entrena 💪",
+  "letra": "M",
+  "colores": {
+   "d": "#283593",
+   "p": "#7986CB",
+   "m": "#C5CAE9",
+   "l": "#E8EAF6",
+   "xl": "#F5F6FC",
+   "ink": "#1A1F4D",
+   "g": "#FFB300"
+  },
+  "stickers": [
+   "💪",
+   "🏋️",
+   "🔥",
+   "⚡",
+   "🏃",
+   "🥇",
+   "🥗",
+   "💧",
+   "🚴",
+   "🧘",
+   "🏆",
+   "🎯",
+   "🦾",
+   "🌟",
+   "🥊",
+   "⛰️",
+   "🏊",
+   "🤸",
+   "🍌",
+   "🥚",
+   "🧃",
+   "🎽",
+   "👟",
+   "⏱️",
+   "📈",
+   "🏅",
+   "🫀",
+   "🦵"
+  ],
+  "foco_label": "Objetivo de la semana",
+  "lema": "¡Un entrenamiento a la vez!",
+  "elogios": [
+   "¡Bien ahí, Martín! Otra estrella.",
+   "¡Eso! Sumaste constancia.",
+   "¡Excelente! Así se progresa."
+  ],
+  "dia_completo": "¡Día perfecto, Martín! Cumpliste todo.",
+  "cierre_voz": "Cuando termines, marcá la estrella.",
+  "ejemplo_voz": [
+   "Hoy toca piernas. Calentá diez minutos.",
+   "¿Listo para entrenar? ¡Vamos!",
+   "Hora de dormir: el músculo crece descansando.",
+   "¡Sumaste una estrella!",
+   "Constancia… técnica… y descanso. Esa es la fórmula."
+  ],
+  "avisos": true
+ },
+ "inicio": "2026-12-07",
+ "semanas": 4,
+ "foco_semanal": [
+  "Técnica",
+  "+5% de peso",
+  "Volumen",
+  "Descarga"
+ ],
+ "areas": {
+  "FZA": {
+   "nombre": "Fuerza",
+   "emoji": "🏋️",
+   "mision": "Entrenamiento de fuerza"
+  },
+  "CAR": {
+   "nombre": "Cardio",
+   "emoji": "🏃",
+   "mision": "Cardio"
+  },
+  "MOV": {
+   "nombre": "Movilidad",
+   "emoji": "🧘",
+   "mision": "Movilidad y core"
+  }
+ },
+ "semana_tipo": {
+  "lun": [
+   {
+    "hora": "7:00",
+    "titulo": "Despertar + desayuno proteico",
+    "emoji": "🍳"
+   },
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "FZA",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00",
+    "titulo": "Comida post-entreno",
+    "emoji": "🥗",
+    "mision": "Comí bien post-entreno",
+    "id": "comida"
+   },
+   {
+    "hora": "23:00",
+    "titulo": "Dormir 7–8 h",
+    "emoji": "😴",
+    "mision": "A dormir a horario",
+    "id": "dormir",
+    "aviso": -15
+   }
+  ],
+  "mar": [
+   {
+    "hora": "7:00",
+    "titulo": "Despertar + desayuno proteico",
+    "emoji": "🍳"
+   },
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "CAR",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00",
+    "titulo": "Comida post-entreno",
+    "emoji": "🥗",
+    "mision": "Comí bien post-entreno",
+    "id": "comida"
+   },
+   {
+    "hora": "23:00",
+    "titulo": "Dormir 7–8 h",
+    "emoji": "😴",
+    "mision": "A dormir a horario",
+    "id": "dormir",
+    "aviso": -15
+   }
+  ],
+  "mie": [
+   {
+    "hora": "7:00",
+    "titulo": "Despertar + desayuno proteico",
+    "emoji": "🍳"
+   },
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "FZA",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00",
+    "titulo": "Comida post-entreno",
+    "emoji": "🥗",
+    "mision": "Comí bien post-entreno",
+    "id": "comida"
+   },
+   {
+    "hora": "23:00",
+    "titulo": "Dormir 7–8 h",
+    "emoji": "😴",
+    "mision": "A dormir a horario",
+    "id": "dormir",
+    "aviso": -15
+   }
+  ],
+  "jue": [
+   {
+    "hora": "7:00",
+    "titulo": "Despertar + desayuno proteico",
+    "emoji": "🍳"
+   },
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "MOV",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00",
+    "titulo": "Comida post-entreno",
+    "emoji": "🥗",
+    "mision": "Comí bien post-entreno",
+    "id": "comida"
+   },
+   {
+    "hora": "23:00",
+    "titulo": "Dormir 7–8 h",
+    "emoji": "😴",
+    "mision": "A dormir a horario",
+    "id": "dormir",
+    "aviso": -15
+   }
+  ],
+  "vie": [
+   {
+    "hora": "7:00",
+    "titulo": "Despertar + desayuno proteico",
+    "emoji": "🍳"
+   },
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   },
+   {
+    "hora": "18:30–19:30",
+    "pool": "FZA",
+    "aviso": -30
+   },
+   {
+    "hora": "20:00",
+    "titulo": "Comida post-entreno",
+    "emoji": "🥗",
+    "mision": "Comí bien post-entreno",
+    "id": "comida"
+   },
+   {
+    "hora": "23:00",
+    "titulo": "Dormir 7–8 h",
+    "emoji": "😴",
+    "mision": "A dormir a horario",
+    "id": "dormir",
+    "aviso": -15
+   }
+  ],
+  "sab": [
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   },
+   {
+    "hora": "10:00–11:00",
+    "pool": "CAR",
+    "aviso": -30
+   },
+   {
+    "hora": "Tarde",
+    "titulo": "Libre",
+    "emoji": "🎉",
+    "libre": true
+   }
+  ],
+  "dom": [
+   {
+    "hora": "Todo el día",
+    "titulo": "Descanso activo",
+    "emoji": "🛋️",
+    "libre": true,
+    "voz": "Hoy descansás. Una caminata suave suma."
+   },
+   {
+    "hora": "9:00",
+    "titulo": "Tomar 2 litros de agua",
+    "emoji": "💧",
+    "mision": "Agua del día (2 L)",
+    "id": "agua",
+    "voz": "Arrancá el día con agua. Meta: dos litros."
+   }
+  ]
+ },
+ "pools": {
+  "FZA": [
+   {
+    "tema": "Pecho y tríceps",
+    "objetivo": "4 ejercicios · 3–4 series · descanso 90 s",
+    "videos": [
+     [
+      "Técnica: press banca",
+      "https://www.youtube.com/results?search_query=press+banca+tecnica+correcta"
+     ]
+    ],
+    "actividad": "Press banca 4×8 · Press inclinado mancuernas 3×10 · Fondos 3×máx · Extensión tríceps polea 3×12",
+    "cierre": "Estirar 5 minutos y anotar los pesos usados.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Pecho y tríceps. Calentá diez minutos y arrancamos."
+   },
+   {
+    "tema": "Espalda y bíceps",
+    "objetivo": "4 ejercicios · 3–4 series · descanso 90 s",
+    "videos": [
+     [
+      "Técnica: remo con barra",
+      "https://www.youtube.com/results?search_query=remo+con+barra+tecnica+correcta"
+     ]
+    ],
+    "actividad": "Dominadas o jalón 4×8 · Remo con barra 4×8 · Remo unilateral 3×10 · Curl bíceps 3×12",
+    "cierre": "Estirar 5 minutos y anotar los pesos usados.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Espalda y bíceps. Calentá diez minutos y arrancamos."
+   },
+   {
+    "tema": "Piernas",
+    "objetivo": "4 ejercicios · 3–4 series · descanso 90 s",
+    "videos": [
+     [
+      "Técnica: sentadilla",
+      "https://www.youtube.com/results?search_query=sentadilla+tecnica+correcta"
+     ]
+    ],
+    "actividad": "Sentadilla 4×8 · Peso muerto rumano 3×10 · Estocadas 3×10 por pierna · Gemelos 4×15",
+    "cierre": "Estirar 5 minutos y anotar los pesos usados.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Piernas. Calentá diez minutos y arrancamos."
+   },
+   {
+    "tema": "Hombros y core",
+    "objetivo": "4 ejercicios · 3–4 series · descanso 90 s",
+    "videos": [
+     [
+      "Técnica: press militar",
+      "https://www.youtube.com/results?search_query=press+militar+tecnica+correcta"
+     ]
+    ],
+    "actividad": "Press militar 4×8 · Elevaciones laterales 3×12 · Face pull 3×15 · Plancha 3×45 s",
+    "cierre": "Estirar 5 minutos y anotar los pesos usados.",
+    "material": "Gimnasio o mancuernas",
+    "voz": "Hoy toca Hombros y core. Calentá diez minutos y arrancamos."
+   }
+  ],
+  "CAR": [
+   {
+    "tema": "Intervalos (HIIT)",
+    "objetivo": "Subir el pulso en bloques cortos.",
+    "videos": [
+     [
+      "Intervalos (HIIT)",
+      "https://www.youtube.com/results?search_query=hiit+20+minutos"
+     ]
+    ],
+    "actividad": "8 rondas de 30 s fuerte y 90 s suave.",
+    "cierre": "Caminar 5 minutos y estirar.",
+    "material": "Zapatillas",
+    "voz": "Hoy toca Intervalos (HIIT). 8 rondas de 30 s fuerte y 90 s suave."
+   },
+   {
+    "tema": "Trote continuo",
+    "objetivo": "Base aeróbica.",
+    "videos": [
+     [
+      "Trote continuo",
+      "https://www.youtube.com/results?search_query=tecnica+de+carrera+principiantes"
+     ]
+    ],
+    "actividad": "30 a 40 minutos a ritmo cómodo.",
+    "cierre": "Caminar 5 minutos y estirar.",
+    "material": "Zapatillas",
+    "voz": "Hoy toca Trote continuo. 30 a 40 minutos a ritmo cómodo."
+   },
+   {
+    "tema": "Bici o elíptico",
+    "objetivo": "Cardio de bajo impacto.",
+    "videos": [
+     [
+      "Bici o elíptico",
+      "https://www.youtube.com/results?search_query=rutina+eliptico+30+minutos"
+     ]
+    ],
+    "actividad": "35 minutos a ritmo moderado.",
+    "cierre": "Caminar 5 minutos y estirar.",
+    "material": "Zapatillas",
+    "voz": "Hoy toca Bici o elíptico. 35 minutos a ritmo moderado."
+   }
+  ],
+  "MOV": [
+   {
+    "tema": "Movilidad y core",
+    "objetivo": "Prevenir lesiones.",
+    "videos": [
+     [
+      "Movilidad completa",
+      "https://www.youtube.com/results?search_query=rutina+movilidad+20+minutos"
+     ]
+    ],
+    "actividad": "Movilidad de cadera y hombros 10 min · Plancha 3×45 s · Dead bug 3×12 · Puente de glúteo 3×15",
+    "cierre": "Respiración 2 min.",
+    "material": "Colchoneta",
+    "voz": "Hoy toca movilidad y core. Sin apuro: buena técnica."
+   }
+  ]
+ }
+}
